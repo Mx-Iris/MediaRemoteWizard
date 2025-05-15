@@ -1,8 +1,5 @@
 # MediaRemoteWizard
 
-> [!WARNING]
-> Apple once again changed the logic in macOS 15.5, resulting in different errors. Try not to upgrade to the latest version until a new solution is found.
-
 This tool allows any application running on macOS 15.4 to access MediaRemote to obtain NowPlaying information.
 
 After macOS 15.4, Apple added entitlement verification in the mediaremoted daemon. Clients without the corresponding entitlement will be denied access to NowPlaying information, causing applications that previously relied on this private framework to stop working, including LyricsX which I maintain.
