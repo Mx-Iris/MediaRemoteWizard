@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E90B5ED92DAE8979008D77CA /* StatusItemController in Frameworks */ = {isa = PBXBuildFile; productRef = E90B5ED82DAE8979008D77CA /* StatusItemController */; };
+		E917009F2DF560720080A4DD /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = E917009E2DF560720080A4DD /* LaunchAtLogin */; };
 		E9B88E332DAD319D007EB602 /* com.JH.mediaremotedd in Embed LaunchServices */ = {isa = PBXBuildFile; fileRef = E9C654682DACB536001B058D /* com.JH.mediaremotedd */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		E9B88E342DAD31AC007EB602 /* MediaRemoteDaemonInjection.framework in Resources */ = {isa = PBXBuildFile; fileRef = E9C654742DACB57D001B058D /* MediaRemoteDaemonInjection.framework */; };
 		E9B88E392DAD32B2007EB602 /* MediaRemoteWizardShared in Frameworks */ = {isa = PBXBuildFile; productRef = E9B88E382DAD32B2007EB602 /* MediaRemoteWizardShared */; };
@@ -115,6 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E917009F2DF560720080A4DD /* LaunchAtLogin in Frameworks */,
 				E90B5ED92DAE8979008D77CA /* StatusItemController in Frameworks */,
 				E9C6548D2DACB59E001B058D /* FilesService in Frameworks */,
 				E9C654832DACB58C001B058D /* HelperClient in Frameworks */,
@@ -211,6 +213,7 @@
 				E9C6548C2DACB59E001B058D /* FilesService */,
 				E9B88E382DAD32B2007EB602 /* MediaRemoteWizardShared */,
 				E90B5ED82DAE8979008D77CA /* StatusItemController */,
+				E917009E2DF560720080A4DD /* LaunchAtLogin */,
 			);
 			productName = MediaRemoteWizard;
 			productReference = E9C6544F2DACB497001B058D /* MediaRemoteWizard.app */;
@@ -298,6 +301,7 @@
 			packageReferences = (
 				E9C654632DACB512001B058D /* XCRemoteSwiftPackageReference "swift-helper-service" */,
 				E90B5ED72DAE8979008D77CA /* XCRemoteSwiftPackageReference "StatusItemController" */,
+				E917009D2DF560720080A4DD /* XCRemoteSwiftPackageReference "LaunchAtLogin-Modern" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = E9C654502DACB497001B058D /* Products */;
@@ -856,6 +860,14 @@
 				minimumVersion = 2.0.1;
 			};
 		};
+		E917009D2DF560720080A4DD /* XCRemoteSwiftPackageReference "LaunchAtLogin-Modern" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sindresorhus/LaunchAtLogin-Modern";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 		E9C654632DACB512001B058D /* XCRemoteSwiftPackageReference "swift-helper-service" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Mx-Iris/swift-helper-service";
@@ -871,6 +883,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = E90B5ED72DAE8979008D77CA /* XCRemoteSwiftPackageReference "StatusItemController" */;
 			productName = StatusItemController;
+		};
+		E917009E2DF560720080A4DD /* LaunchAtLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E917009D2DF560720080A4DD /* XCRemoteSwiftPackageReference "LaunchAtLogin-Modern" */;
+			productName = LaunchAtLogin;
 		};
 		E9B88E382DAD32B2007EB602 /* MediaRemoteWizardShared */ = {
 			isa = XCSwiftPackageProductDependency;

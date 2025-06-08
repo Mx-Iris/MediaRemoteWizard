@@ -1,4 +1,5 @@
 import SwiftUI
+import LaunchAtLogin
 
 struct MainView: View {
     var viewModel: MainViewModel = .init()
@@ -44,6 +45,12 @@ struct MainView: View {
                     }
                 }
                 .buttonStyle(PlainButtonStyle())
+                
+                HStack {
+                    LaunchAtLogin.Toggle {
+                        Text("Launch at login")
+                    }
+                }
             }
         }
         .formStyle(.grouped)
@@ -52,7 +59,7 @@ struct MainView: View {
         } message: { error in
             Text("\(error)")
         }
-        .frame(minWidth: 300)
+        .frame(maxWidth: 300)
     }
 }
 
