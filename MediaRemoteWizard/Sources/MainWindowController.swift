@@ -2,13 +2,17 @@ import AppKit
 
 final class MainWindowController: NSWindowController, NSWindowDelegate {
     
-    static let shared = MainWindowController()
+    let client: MediaRemoteWizardClient
     
-    lazy var mainViewController = MainViewController()
+    lazy var mainViewController = MainViewController {
+        MainView()
+            .environmentObject(client)
+    }
 
     override var windowNibName: NSNib.Name? { "" }
 
-    init() {
+    init(client: MediaRemoteWizardClient) {
+        self.client = client
         super.init(window: nil)
     }
 

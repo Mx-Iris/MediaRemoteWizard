@@ -1,8 +1,8 @@
 import SwiftUI
 
-final class MainViewController: NSHostingController<MainView> {
-    init() {
-        super.init(rootView: .init())
+final class MainViewController: NSHostingController<AnyView> {
+    init(rootViewProvider:() -> some View) {
+        super.init(rootView: .init(rootViewProvider()))
         sizingOptions = .preferredContentSize
     }
 

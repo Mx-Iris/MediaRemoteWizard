@@ -1,10 +1,3 @@
-//
-//  ProcessMonitor.swift
-//  MediaRemoteWizard
-//
-//  Created by JH on 2025/4/14.
-//
-
 import Foundation
 import Darwin
 

@@ -7,7 +7,7 @@ import InjectionService
 import MediaRemoteWizardShared
 
 @Observable
-final class MainViewModel {
+final class MediaRemoteWizardClient: ObservableObject {
     private let processMonitor = ProcessMonitor(processName: "mediaremoted")
 
     private static let logger = Logger(subsystem: "com.JH.MediaRemoteWizard", category: "ViewModel")
