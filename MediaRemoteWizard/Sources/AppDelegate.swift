@@ -14,6 +14,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         _ = MainStatusItemController.shared
         if showMainWindowOnLaunch {
             showMainWindow()
+        } else {
+            hideMainWindow()
         }
     }
 
@@ -24,6 +26,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @objc func showMainWindow() {
         mainWindowController.showWindow(nil)
         NSApplication.shared.setActivationPolicy(.regular)
+        NSApplication.shared.activate(ignoringOtherApps: true)
+    }
+    
+    @objc func hideMainWindow() {
+        if mainWindowController.window?.isVisible == true {
+            mainWindowController.close()
+        }
+        NSApplication.shared.setActivationPolicy(.accessory)
         NSApplication.shared.activate(ignoringOtherApps: true)
     }
 }
