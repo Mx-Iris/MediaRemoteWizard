@@ -14,8 +14,6 @@ final class MediaRemoteWizardClient: ObservableObject {
 
     public private(set) var isHelperConnected: Bool = false
 
-    public private(set) var isHopperRunning: Bool = false
-
     private let helperClient = HelperClient()
 
     private var logger: Logger { Self.logger }
