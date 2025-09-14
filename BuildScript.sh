@@ -4,7 +4,7 @@ project_name="MediaRemoteWizard"
 
 scheme_name="MediaRemoteWizard"
 
-development_mode="PreRelease"
+development_mode="Debug"
 
 build_path=${project_path}/build
 

@@ -3,7 +3,7 @@ import Foundation
 import Observation
 import HelperClient
 import HelperCommunication
-import InjectionService
+import InjectionServiceInterface
 import MediaRemoteWizardShared
 
 @Observable
@@ -40,6 +40,7 @@ final class MediaRemoteWizardClient: ObservableObject {
             guard let self else { return }
             Task {
                 do {
+                    try await Task.sleep(for: .seconds(1))
                     guard let dylib = Bundle.main.url(forResource: "MediaRemoteDaemonInjection", withExtension: "framework") else {
                         self.logger.error("Failed to get dylib URL")
                         return
@@ -50,12 +51,14 @@ final class MediaRemoteWizardClient: ObservableObject {
                     }
 
                     try await self.helperClient.sendToTool(request: InjectApplicationRequest(pid: pid, dylibURL: dylibURL))
-                    self.logger.debug("Injected into process with PID: \(pid)")
+                    self.logger.log("Injected into process with PID: \(pid)")
                 } catch {
-                    print(error)
+                    self.logger.error("\(error)")
                 }
             }
         }
-        processMonitor.startMonitoring(interval: 0.5)
+        await MainActor.run {
+            processMonitor.startMonitoring(interval: 0.5)
+        }
     }
 }

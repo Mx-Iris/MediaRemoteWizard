@@ -7,8 +7,8 @@
 
 import Foundation
 import HelperService
-import InjectionService
 import HelperServer
+import InjectionServiceImplementation
 
 let server = try await HelperServer(serverType: .machService(name: "com.JH.mediaremotedd"), services: [InjectionService()])
 await server.activate()

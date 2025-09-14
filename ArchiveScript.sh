@@ -4,15 +4,17 @@ project_name="MediaRemoteWizard"
 
 scheme_name="MediaRemoteWizard"
 
-development_mode="PreRelease"
+development_mode="Release"
 
-build_path=${project_path}/build
+build_path=${project_path}/.archiveBuild
+
+archive_path=${project_path}/archive
 
 xcodebuild archive \
 -scheme ${scheme_name} \
 -configuration ${development_mode} \
 -destination 'generic/platform=macOS' \
--archivePath ${build_path}/${project_name}.xcarchive \
+-archivePath ${archive_path}/${project_name}.xcarchive \
 CONFIGURATION_BUILD_DIR=${build_path} \
 ARCHS="x86_64 arm64e"
 
