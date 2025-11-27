@@ -1,0 +1,51 @@
+{
+  "originHash" : "2cbc981f78bf4ad73c8211130f6702539a676c37d79c3261ec1a12c900eacff4",
+  "pins" : [
+    {
+      "identity" : "launchatlogin-modern",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/sindresorhus/LaunchAtLogin-Modern",
+      "state" : {
+        "revision" : "a04ec1c363be3627734f6dad757d82f5d4fa8fcc",
+        "version" : "1.1.0"
+      }
+    },
+    {
+      "identity" : "machinjector",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/MxIris-Reverse-Engineering/MachInjector",
+      "state" : {
+        "branch" : "main",
+        "revision" : "2d3a3ead2f5c832c56b765e0cbd7dc48d95fed27"
+      }
+    },
+    {
+      "identity" : "statusitemcontroller",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/hexedbits/StatusItemController",
+      "state" : {
+        "revision" : "bbded09a286590564dbf9cf8f9f5e5ffbd5e8fab",
+        "version" : "2.0.1"
+      }
+    },
+    {
+      "identity" : "swift-helper-service",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Mx-Iris/swift-helper-service",
+      "state" : {
+        "branch" : "main",
+        "revision" : "5054572bb7ef6f360fc2adc79e7429602bbb3950"
+      }
+    },
+    {
+      "identity" : "swiftyxpc",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/MxIris-macOS-Library-Forks/SwiftyXPC",
+      "state" : {
+        "branch" : "main",
+        "revision" : "6735c52ce0c5715991ee7d00ba642c52566b415a"
+      }
+    }
+  ],
+  "version" : 3
+}
